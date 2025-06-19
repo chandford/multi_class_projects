@@ -40,7 +40,7 @@ I want to see a LIST of all of the MOBILE phone NUMBERS IN all my DIARY ENTRIES
  │                       │   └──┬───────┬────────────┘       └───────────┬─────────┘  
  │   - add()             │      │       │                                │            
  │   - all()             │      │       │    stores                      │  stores    
- │                       │   ┌──┘       │  instances                     │ instances  
+ │   - remove()          │   ┌──┘       │  instances                     │ instances  
  │                       │   │        ─ │     of...                      │   of...    
  │                       ├───┘          │                                │            
  │                       │   ┌──────────┴────────────┐       ┌───────────┴─────────┐  
@@ -77,7 +77,6 @@ class DiaryEntry:
         #   Sets the entry_num property
         #   Sets the contents property
         #   Sets the date property
-
         pass
 
     def count_words(self):
@@ -247,6 +246,13 @@ class ContactManager:
         #   A list of dictionaries of contacts(?)
         pass
 
+    def remove(self, contact):
+        # Parameters:
+        #   contact: an instance of a Contact object ?
+        # Returns:
+        #   Nothing
+        pass
+
 ```
 
 ## 3. Create Examples as Integration Tests
@@ -258,16 +264,83 @@ combinations that reflect the ways in which the system will be used._
 # EXAMPLE
 
 """
-Given a library
-When we add two tracks
-We see those tracks reflected in the tracks list
+Given a Diary
+We can add multiple Entries
+And see those tracks reflected in the entry_list
 """
-library = MusicLibrary()
-track_1 = Track("Carte Blanche", "Veracocha")
-track_2 = Track("Synaesthesia", "The Thrillseekers")
-library.add(track_1)
-library.add(track_2)
-library.tracks # => [track_1, track_2]
+# library = MusicLibrary()
+# track_1 = Track("Carte Blanche", "Veracocha")
+# track_2 = Track("Synaesthesia", "The Thrillseekers")
+# library.add(track_1)
+# library.add(track_2)
+# library.tracks # => [track_1, track_2]
+
+"""
+Given a Diary with added entries
+We can generate a total word count
+For all entries the entry_list
+"""
+pass 
+
+"""
+Given a Diary with added entries
+We can calculate the total reading time
+For all entries the entry_list
+"""
+pass
+"""
+Given a Diary with entries
+We can locate the best entry based on reading speed and time
+Out of all entries the entry_list
+"""
+pass
+
+
+
+"""
+Given a ToDoList
+We can add Todos
+And see those tasks reflected in the todo_list
+"""
+pass
+
+"""
+Given a ToDoList with added tasks
+We can generate a list of outstanding tasks
+Which are not yet marked as complete 
+"""
+pass
+
+"""
+Given a ToDoList with added tasks
+We can generate a list of the tasks
+Which have already been completed
+"""
+pass
+
+"""
+Given a ToDoList with added tasks
+We can reset the list
+By marking all Todos as complete
+"""
+pass
+
+
+
+ """
+Given a Diary with
+We can locate all mobile phone numbers from the Diary Entries
+And view them using ContactManager
+"""
+pass
+
+ """
+Given a ContactManager
+Populated with Contacts from a Diary
+We can manually remove a Contact  
+"""
+pass
+
 ```
 
 ## 4. Create Examples as Unit Tests
